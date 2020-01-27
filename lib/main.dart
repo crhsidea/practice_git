@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:practice_git/page2.dart';
 
 void main() => runApp(MyApp());
 
@@ -55,6 +56,10 @@ class _MyHomePageState extends State<MyHomePage> {
               onPressed: () {
                 setState(() {
                   count++;
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Page2Page(count: count,)),
+                  );
                 });
               },
             ),
